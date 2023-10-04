@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KONTAK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+      <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <h2>KONTAK</h2>
+          <input type="text" class="field" placeholder="Your Name">
+          <input type="text" class="field" placeholder="Your Email">
+          <input type="text" class="field" placeholder="Your Phone">
+          <textarea id="Massege" rows="4" placeholder="Massage"></textarea>
+          <button type="sumbit">Sebd</button>
+        </form>
+       </div>       
+          <script src="https://smtpjs.com/v3/smtp.js"></script> 
+        <script>
+          function sendEmail(){
+             Email.send({
+              Host : "smtp.gmail.com",
+              username : "apridiasi777@gmail.com",
+              pasword : "apri",
+              to : 'srimulyatiiwil@gmail.com',
+              from : document.getElementById("email"),value,
+              subject: "new contect form enquiry"
+              body : "Name: " + document.getElementById("name").value
+                   + "<br" Email: " + document.getElementById"("email").value
+                   + "<br" Phone no: " + document.getElementById"("phone").value
+                   + "<br" Massage: " + document.getElementById"("message").value
+
+             }).then(
+              message =>alert("Message sent succesfully")
+              ):
+          }
+      </script>
+</body>
+</html>
